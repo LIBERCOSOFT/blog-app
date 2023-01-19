@@ -4,12 +4,14 @@
 - [📖 RAILS BLOG APP ](#-rails-blog-app-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Install \& Setup](#install--setup)
     - [Tests](#tests)
     - [Deployment](#deployment)
   - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
   - [⭐️ Show your support ](#️-show-your-support-)
   - [📝 License ](#-license-)
@@ -39,7 +41,11 @@
   </ul>
 </details>
 
+### Key Features <a name="key-features"></a>
 
+- **Create User, Post, Comment and Likes table for the blog**
+- **Save all information in postgres database**
+- **Retrive information from the database**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -88,14 +94,14 @@ $ cd blog-app
 - Install the required dependecies with `bundle install`
 - Install npm dependencies with `npm install`
 - **Before running below commands update [config/database.yml](./config/database.yml) with your local `DB`credentials. Then run:**
-      - **`rake db:create`**
-      - **`rake db:migrate`**
-      - **`rake db:seed`**
+      - **`rails db:create`**
+      - **`rails db:migrate`**
+      - **`rails db:seed`**
 - With Ruby on Rails and PostgreSQL installed in your environment, you can run `rails server` to run the website.
 
 ### Tests
 
-- Run `rake db:seed RAILS_ENV=test` to seed the testing database
+- Run `rails db:seed RAILS_ENV=test` to seed the testing database
 - Run `rspec`
 
 ### Deployment
@@ -114,6 +120,13 @@ N/A
 - GitHub: [LIBERCOSOFT](https://github.com/LIBERCOSOFT)
 - Twitter: [@Gerfieldt](https://twitter.com/Gerfieldt)
 - LinkedIn: [Kolapo Akinrinlola](https://linkedin.com/in/kolapo-akinrinlola)
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+- [ ] **Create a proper view for the project (Frontend)**
+- [ ] **Implement API Endpoints**
+- [ ] **Implement authentication and authorization**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
