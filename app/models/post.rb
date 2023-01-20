@@ -3,6 +3,9 @@ class Post < ApplicationRecord
   has_many :likes
   belongs_to :author, class_name: 'User'
 
+  validates :title, presence: true, length: { in: 1...250 }
+  validates :comments_counter, :likes_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+
   def self.update_posts_counter(author_id)
     user = User.find_by_id(author_id)
     user.increment!(:posts_counter)
