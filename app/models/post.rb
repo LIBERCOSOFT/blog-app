@@ -2,13 +2,23 @@ class Post < ApplicationRecord
   has_many :comments
   has_many :likes
   belongs_to :author, class_name: 'User'
+  after_initialize :set_comments_and_likes_counter_default
 
-  def self.update_posts_counter(author_id)
+  validates :title, presence: true, length: { in: 1...250 }
+  validates :comments_counter, :likes_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+
+  def update_posts_counter
     user = User.find_by_id(author_id)
     user.increment!(:posts_counter)
   end
 
-  def self.five_most_recent_comment(post_id)
-    Comment.where("post_id = #{post_id}").order('created_at DESC').first(5)
+  def five_most_recent_comment
+    Comment.where(post_id: self).order('created_at DESC').first(5)
   end
+
+  def set_comments_and_likes_counter_default
+    self.comments_counter = 0 if comments_counter.nil?
+    self.likes_counter = 0 if likes_counter.nil?
+  end
+  private :set_comments_and_likes_counter_default
 end
