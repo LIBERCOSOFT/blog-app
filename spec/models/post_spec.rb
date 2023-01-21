@@ -12,7 +12,7 @@ RSpec.describe Post, type: :model do
     end
 
     it 'Should have a title less than 250 words' do
-      subject.title = 'Consequat nulla incididunt in ut nulla irure est aliquip labore pariatur. Voluptate est officia ad velit. Quis in ex id consequat sunt laboris nostrud officia. Duis Lorem culpa irure adipisicing aliqua excepteur cillum non magna deserunt fugiat. Reprehenderit non incididunt duis duis enim ullamco enim ex.Ex eiusmod sit aute ex aute consectetur non consequat. Esse aliquip proident reprehenderit ut sint commodo. Qui ipsum anim incididunt nisi exercitation veniam et incididunt elit. Velit commodo nulla enim aute mollit est nisi commodo sit laboris Lorem quis aute voluptate. Elit sunt velit incididunt aute sunt dolore et velit id. Ad proident ullamco culpa anim cillum consectetur qui occaecat.'
+      subject.title = 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec.'
       expect(subject).to_not be_valid
     end
 
