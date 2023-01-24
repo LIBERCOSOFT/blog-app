@@ -1,16 +1,17 @@
 <h1> A user's full post with all comments</h1>
 
 <div>
-  <div>
+  <div class="post_heading">
     <h2><%= @post.title %> by <%= @user.name %></h2>
-    <span>Comments: <%= @post.comments_counter %></span>
-    <span>Likes: <%= @post.likes_counter %></span>
+    <span>Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %></span>
   </div>
-  <p><%= @post.text %></p>
-  <% @comments.each do |comment| %>
-    <div>
-      <span><%= comment.author.name %>: </span>
-      <span><%= comment.text %></span>
-     </div>
-  <% end %>
+  <p class='post_text'><%= @post.text %></p>
+  <div class="comment_container">
+    <% @comments.each do |comment| %>
+      <div>
+        <span><%= comment.author.name %>: </span>
+        <span><%= comment.text %></span>
+      </div>
+    <% end %>
+  </div>
 </div>

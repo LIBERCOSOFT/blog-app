@@ -14,19 +14,24 @@
 </div>
 
 <% @posts.each_with_index do |post, index| %>
-  <div id="<%= index %>" class='post_container'>
-    <h2> <%= post.title%> </h2>
-    <p><%= post.text %></p>
-    <div class='comment_likes'>
-      <span>Comments: <%= post.comments_counter %> </span>
-      <span>Likes: <%= post.likes_counter %> </span>
+  <div id="<%= index %>">
+    <div class='post_container'>
+      <h2> <%= post.title%> </h2>
+      <p><%= post.text %></p>
+      <div class='comment_likes'>
+        <span>Comments: <%= post.comments_counter %> </span>
+        <span>Likes: <%= post.likes_counter %> </span>
+      </div>
     </div>
-    <% post.five_most_recent_comment.each do |comment| %>
+    <div class='post_container'>
+      <% post.five_most_recent_comment.each do |comment| %>
       <div>
         <span><%= comment.author.name %>: </span>
         <span><%= comment.text %></span>
       </div>
     <% end %>
+    </div>
+    
   </div>
 <% end %>
-<div>Pagination</div>
+<div class='pagination'>Pagination</div>
