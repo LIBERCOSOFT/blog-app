@@ -1,0 +1,21 @@
+.user_container {
+  display: flex;
+}
+
+.user_container > div > img {
+  height: 120px;
+  width: 120px;
+  margin-top: 1em;
+}
+
+.user_details {
+  border: 2px solid #000;
+  padding: 0 2em;
+  margin: 1em 1em;
+  width: 200px;
+  height: 120px;
+}
+
+.user_details > p {
+  float: right;
+}
