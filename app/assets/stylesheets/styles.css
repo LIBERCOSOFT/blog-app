@@ -10,12 +10,25 @@
 
 .user_details {
   border: 2px solid #000;
-  padding: 0 2em;
+  padding: 0 1em;
   margin: 1em 1em;
   width: 200px;
   height: 120px;
 }
 
 .user_details > p {
+  float: right;
+}
+
+.bio_container,
+.post_container {
+  border: 2px solid #000;
+  padding: 0 1em;
+  margin: 1em 0;
+  width: 200px;
+  height: 150px;
+}
+
+.post_container > div {
   float: right;
 }
