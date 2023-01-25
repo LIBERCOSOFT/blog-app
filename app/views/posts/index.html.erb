@@ -1,11 +1,37 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>All User's posts with comments</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-  </head>
+<h1> List of all User's post with five most recent comments </h1>
+<div id="<%= @user.id %>" class="user_container">
+    <div>
+      <%= image_tag "#{@user.photo}" %>
+    </div>
+    <div class='user_details'>
+      <h2><%= @user.name %></h2>
+      <p>Number of posts: <%= @user.posts_counter %></p>
+    </div>
+</div>
+<div class='bio_container'>
+<p><b>Bio</b></p>
+  <%= @user.bio %>
+</div>
 
-  <body>
-    <h1> List of all User's post with five most recent comments </h1>
-  </body>
-</html>
+<% @posts.each_with_index do |post, index| %>
+  <div id="<%= index %>">
+    <div class='post_container'>
+      <h2> <%= post.title%> </h2>
+      <p><%= post.text %></p>
+      <div class='comment_likes'>
+        <span>Comments: <%= post.comments_counter %> </span>
+        <span>Likes: <%= post.likes_counter %> </span>
+      </div>
+    </div>
+    <div class='post_container'>
+      <% post.five_most_recent_comment.each do |comment| %>
+      <div>
+        <span><%= comment.author.name %>: </span>
+        <span><%= comment.text %></span>
+      </div>
+    <% end %>
+    </div>
+    
+  </div>
+<% end %>
+<div class='pagination'>Pagination</div>

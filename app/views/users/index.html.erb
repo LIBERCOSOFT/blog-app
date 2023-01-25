@@ -1,11 +1,13 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>All Users</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-  </head>
+<h1>List of all Users with their number of posts only</h1>
 
-  <body>
-    <h1> List of all Users with their number of posts only </h1>
-  </body>
-</html>
+<% @users.each_with_index do |user, index| %>
+  <div id="<%= index %>" class="user_container">
+    <div>
+      <%= image_tag "#{user.photo}" %>
+    </div>
+    <div class='user_details'>
+      <h2><%= user.name %></h2>
+      <p>Number of posts: <%= user.posts_counter %></p>
+    </div>
+  </div>
+<% end %>

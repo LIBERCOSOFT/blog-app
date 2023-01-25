@@ -1,11 +1,17 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>A User's full post</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-  </head>
+<h1> A user's full post with all comments</h1>
 
-  <body>
-    <h1> A user's full post with all comments</h1>
-  </body>
-</html>
+<div>
+  <div class="post_heading">
+    <h2><%= @post.title %> by <%= @user.name %></h2>
+    <span>Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %></span>
+  </div>
+  <p class='post_text'><%= @post.text %></p>
+  <div class="comment_container">
+    <% @comments.each do |comment| %>
+      <div>
+        <span><%= comment.author.name %>: </span>
+        <span><%= comment.text %></span>
+      </div>
+    <% end %>
+  </div>
+</div>

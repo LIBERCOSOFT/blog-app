@@ -18,7 +18,9 @@ RSpec.describe 'Users', type: :request do
   end
 
   describe 'GET /user/:id' do
-    before(:each) { get '/users/:id' }
+    subject { User.new(name: 'Authur') }
+    before { subject.save }
+    before(:each) { get "/users/#{subject.id}" }
 
     it 'Should return 200 status code' do
       expect(response).to have_http_status(200)
