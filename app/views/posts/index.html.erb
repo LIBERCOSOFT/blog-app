@@ -22,6 +22,10 @@
         <span>Comments: <%= post.comments_counter %> </span>
         <span>Likes: <%= post.likes_counter %> </span>
       </div>
+      <div>
+        <a href="/post/<%= post.id%>/comment/new" >Comment</a>
+        <a href="/post/<%= post.id%>/like/new">Like</a>
+      </div>
     </div>
     <div class='post_container'>
       <% post.five_most_recent_comment.each do |comment| %>

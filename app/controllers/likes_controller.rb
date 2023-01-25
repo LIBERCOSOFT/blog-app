@@ -5,7 +5,7 @@ class LikesController < ApplicationController
     if new_like.save
       redirect_to "/users/#{current_user.id}/posts", notice: 'Successfully Liked'
     else
-      alert 'Post can\'t be liked at this time'
+      flash[:alert] = 'Post can\'t be liked at this time'
     end
   end
 end
