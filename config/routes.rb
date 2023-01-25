@@ -9,7 +9,11 @@ Rails.application.routes.draw do
   get '/users/:user_id/posts', to: 'posts#index'
   get '/users/:user_id/posts/:id', to: 'posts#show'
 
-  #Comments Routes
+  # Comments Routes
   get '/post/:post_id/comment/new', to: 'comments#new'
   post '/post/:post_id/comment/new', to: 'comments#create', as: 'new_comment'
+
+  # Like Routes
+  get '/post/:post_id/like/new', to: 'likes#create'
+
 end
