@@ -8,4 +8,8 @@ Rails.application.routes.draw do
   post '/post/new', to: 'posts#create'
   get '/users/:user_id/posts', to: 'posts#index'
   get '/users/:user_id/posts/:id', to: 'posts#show'
+
+  #Comments Routes
+  get '/post/:post_id/comment/new', to: 'comments#new'
+  post '/post/:post_id/comment/new', to: 'comments#create', as: 'new_comment'
 end
