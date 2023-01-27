@@ -23,8 +23,8 @@
         <span>Likes: <%= post.likes_counter %> </span>
       </div>
       <div>
-        <a href="/post/<%= post.id%>/comment/new" >Comment</a>
-        <a href="/post/<%= post.id%>/like/new">Like</a>
+        <a href="/users/<%= post.author_id%>/posts/<%= post.id%>/comments/new" >Comment</a>
+        <a href="/users/<%= post.author_id%>/posts/<%= post.id%>/likes/new">Like</a>
       </div>
     </div>
     <div class='post_container'>
