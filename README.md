@@ -121,6 +121,12 @@ N/A
 - Twitter: [@Gerfieldt](https://twitter.com/Gerfieldt)
 - LinkedIn: [Kolapo Akinrinlola](https://linkedin.com/in/kolapo-akinrinlola)
 
+👤 **Amine**
+
+- GitHub: [@ouasamine](https://github.com/ouasamine)
+- Twitter: [@ouass_amine](https://twitter.com/ouass_amine)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/amine-ouassef)
+
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
