@@ -14,7 +14,7 @@ class Post < ApplicationRecord
   end
 
   def five_most_recent_comment
-    Comment.where(post_id: self).order('created_at DESC').first(5)
+    Comment.includes(:author).where(post_id: self).order('created_at DESC').first(5)
   end
 
   def set_comments_and_likes_counter_default
