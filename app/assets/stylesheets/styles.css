@@ -52,26 +52,26 @@ form {
   margin: 1em;
 }
 
-.field:nth-child(-n + 3) input{
-  width: 99%;
-  padding: .5em;
-  font-size: large;
-}
-
-.field:nth-child(4) input{
-  margin: 1em 0;
-}
-
-.actions input{
+.actions input {
   width: 100%;
-  padding: .5em;
+  padding: 0.5em;
   font-size: large;
 }
 
 .reg_field textarea,
-.reg_field input{
+.reg_field input {
   width: 99%;
-  padding: .5em;
+  padding: 0.5em;
   font-size: large;
   margin: 0.5em 0;
+}
+
+.field:nth-child(4) input {
+  margin: 1em 0;
+}
+
+.field:nth-child(-n + 3) input {
+  width: 99%;
+  padding: 0.5em;
+  font-size: large;
 }
