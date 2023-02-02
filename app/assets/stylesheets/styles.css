@@ -47,3 +47,31 @@
   border: 2px solid #000;
   width: 30%;
 }
+
+form {
+  margin: 1em;
+}
+
+.actions input {
+  width: 100%;
+  padding: 0.5em;
+  font-size: large;
+}
+
+.reg_field textarea,
+.reg_field input {
+  width: 99%;
+  padding: 0.5em;
+  font-size: large;
+  margin: 0.5em 0;
+}
+
+.field:nth-child(4) input {
+  margin: 1em 0;
+}
+
+.field:nth-child(-n + 3) input {
+  width: 99%;
+  padding: 0.5em;
+  font-size: large;
+}
