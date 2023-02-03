@@ -11,4 +11,13 @@ class CommentsController < ApplicationController
       render :new
     end
   end
+
+  def destroy
+    post = Post.find(params[:post_id])
+    comment = Comment.find(params[:id])
+    post.comments_counter -= 1
+    comment.destroy
+    post.save
+    redirect_to user_post_path(params[:user_id], params[:post_id])
+  end
 end
